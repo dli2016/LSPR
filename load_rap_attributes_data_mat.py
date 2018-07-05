@@ -63,7 +63,8 @@ def loadRAPAttr(data_filename):
 
 if __name__=='__main__':
 
-    filename = \
-        '/data1/da.li/projects/LSPR/data/Attributes/RAP_attributes_data.mat'
+    #filename = \
+    #    '/data1/da.li/projects/LSPR/data/Attributes/RAP_attributes_data.mat'
+    filename = '/data1/da.li/projects/LSPR/data/new/RAP_attributes_data.mat'
     data = loadRAPAttr(filename)
-    #print data
+    print data

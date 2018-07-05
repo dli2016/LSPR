@@ -27,26 +27,25 @@ def loadRAPReID(data_filename):
     else:
         filename = data_filename.split('/')[-1]
         root_key = filename.split('.')[0]
-    # Identities of training samples.
-    training_samples_id = data[root_key][0][0][0]
-    # Image filename of training samples (to get each item of the filename like
-    # this: training_samples_filename[0][0][0], <type 'numpy.unicode'>).
-    training_samples_filename = data[root_key][0][0][2]
-    image_filenames_train = [ item[0][0] for item in training_samples_filename ]
-    image_filenames_train = np.asarray(image_filenames_train)
+    # Information (image_filename, id, cam_id and day) of training samples.
+    training_set = data[root_key][0][0][0]
     # Image filename of test samples.
-    test_samples_filename = data[root_key][0][0][3]
-    image_filenames_test = [ item[0][0] for item in test_samples_filename ]
-    image_filenames_test = np.asarray(image_filenames_test)
-
-    dataset = {'person_identities_train': training_samples_id, \
-        'image_filenames_train': image_filenames_train, \
-        'image_filenames_test': image_filenames_test}
+    test_samples_filename = data[root_key][0][0][1]
+    test_set = [ item[0][0] for item in test_samples_filename ]
+    test_set = np.asarray(test_set)
+    print test_set.shape
+    dataset = {'training_set': training_set, \
+        'test_set': test_set}
     return dataset
-
 
 if __name__=='__main__':
 
-    filename = '/data1/da.li/projects/LSPR/data/ReID/RAP_reid_data.mat'
+    #filename = '/data1/da.li/projects/LSPR/data/ReID/RAP_reid_data.mat'
+    filename = '/data1/da.li/projects/LSPR/data/new/RAP_reid_data.mat'
     data = loadRAPReID(filename)
     print data
+    # Image filename of training samples (to get each item of the filename like
+    # this: training_samples_filename[0][0][0], <type 'numpy.unicode'>).
+    #training_samples_filename = data[root_key][0][0][2]
+    #image_filenames_train = [ item[0][0] for item in training_samples_filename ]
+    #image_filenames_train = np.asarray(image_filenames_train)
