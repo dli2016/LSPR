@@ -9,4 +9,4 @@ By providing large-scale surveillance data in real scene and standard evaluation
 
 The competition is hold in Chinese Conference on Pattern Recognition and Computer Vision in 2018 (PRCV2018) and attract more than thirty institutions to participate. This report gives a brief analysis and conclusion on the competition results which may help researchers to develop more robust algorithms.
 
-Please refer to the file [LSPRC.pdf](https://github.com/dli2016/LSPR/blob/master/LSPRC.pdf "LSPRC.pdf") for more details on the evaluation results and ralated summarization.
+Please refer to the technical report [LSPRC](https://arxiv.org/abs/1903.02137 "LSPRC.pdf") for more details on the evaluation results and ralated summarization.
